@@ -1,0 +1,23 @@
+*{margin: 0; padding: 0;}
+#formulario{
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    height: 302px;
+}
+#container-caixa-de-texto-convertido,
+#container-caixa-de-texto{
+    width: 250px;
+    height: 250px; 
+}
+#container-botoes-de-conversao{
+    width: 50px;
+    height: 250px;
+}
+#container-botoes-upload-download{
+    width: 550px;
+    height:  50px;
+}
