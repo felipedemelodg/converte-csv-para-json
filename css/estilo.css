@@ -2,7 +2,7 @@
 #formulario{
     display: flex;
     align-items:  center;
-    justify-content: center;
+    /* justify-content: center; */
     height: 100vh;
     flex-wrap: wrap;
     margin-top: 20px;
@@ -20,4 +20,13 @@
 #container-botoes-upload-download{
     width: 550px;
     height:  50px;
+}
+.log{
+    position: fixed ;
+    top: 5px
+}
+#url-container{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }

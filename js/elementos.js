@@ -8,12 +8,19 @@ const botaoConverteParaJson = document.getElementById(
 );
 const botaoUpload = document.getElementById("botao-de-upload");
 const botaoDownload = document.getElementById("botao-de-download");
-
-export const elementos = {
+const form = document.getElementById("formulario");
+const botaoLimpar = document.getElementById("limpar");
+const botaoEscolherPeloCaminho = document.getElementById(
+  "botao-escolher-pelo-caminho"
+);
+export const elem = {
   caixaDeTexto,
   caixaDeTextoConvertido,
   botaoConverteParaCsv,
   botaoConverteParaJson,
   botaoUpload,
   botaoDownload,
+  form,
+  botaoLimpar,
+  botaoEscolherPeloCaminho
 };

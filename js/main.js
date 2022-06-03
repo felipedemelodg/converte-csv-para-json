@@ -1,16 +1,35 @@
-import { elementos } from "./elementos.js";
+import { elem } from "./elementos.js";
+import { limparCaixaDeTexto } from "./limpar.js";
+import { validacao } from "./validacao.js";
+import { converteParaJson } from "./csvParaJson.js";
+import { converteParaCsv } from "./converteParaCsv.js";
+import {soberArquivo} from "./sobeArquivo.js"
 
 
 
-function x (e){
-    let file = e.target.files[0]
-    let fileReader = new FileReader()
-    fileReader.readAsText(file)
-    fileReader.onload  = ()=>{
-        elementos.caixaDeTexto.innerText = fileReader.result
-        console.log(fileReader.result)
-    }
-    // console.log(file.name)
-}
-elementos.botaoUpload.addEventListener('change',x,false)
+elem.form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
 
+elem.botaoConverteParaJson.addEventListener("click", () => {
+  const dados = validacao(elem.caixaDeTexto.value);
+  if (dados != false) {
+    elem.caixaDeTextoConvertido.innerText = converteParaJson(dados.valor);
+  }
+});
+elem.botaoConverteParaCsv.addEventListener("click", () => {
+  const dados = validacao(elem.caixaDeTexto.value);
+  if (dados != false) {
+    elem.caixaDeTextoConvertido.innerText = converteParaCsv(dados.valor);
+  }
+});
+
+elem.botaoLimpar.addEventListener('click',limparCaixaDeTexto,false)
+
+elem.botaoUpload.addEventListener('change',soberArquivo,false)
+
+const x = [
+  { id: "1", nome: "felipe", idade: "29" },
+  { id: "2", nome: "artur", idade: "19" },
+  { id: "3", nome: "nina", idade: "39" },
+];
